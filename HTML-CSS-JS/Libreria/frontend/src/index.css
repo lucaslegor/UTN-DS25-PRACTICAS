@@ -1,0 +1,68 @@
+/* ===================================
+   VARIABLES GLOBALES - Del Otro Lado Del Árbol
+   =================================== */
+
+:root {
+  /* Paleta de colores base */
+  --verde-claro: #a3c68c;
+  --verde-medio: #879676;
+  --gris-oscuro: #6e6662;
+  --purpura-oscuro: #4f364a;
+  --purpura-profundo: #340735;
+  
+  /* Colores semánticos principales */
+  --color-principal: var(--verde-claro);
+  --color-secundario: var(--verde-medio);
+  --color-acento: var(--purpura-oscuro);
+  
+  /* Colores de texto */
+  --texto-principal: var(--purpura-profundo);
+  --texto-secundario: var(--gris-oscuro);
+  --texto-claro: #ffffff;
+  --texto-deshabilitado: #a0a0a0;
+  
+  /* Colores de fondo */
+  --fondo-claro: #ffffff;
+  --fondo-suave: #f5f5f5;
+  --fondo-verde: var(--verde-claro);
+  --fondo-verde-suave: #e8f5e0;
+  --fondo-oscuro: var(--purpura-oscuro);
+  
+  /* Colores de interacción */
+  --hover: var(--verde-medio);
+  --activo: var(--purpura-profundo);
+  --focus: #5fa342;
+  
+  /* Bordes y divisores */
+  --borde: var(--gris-oscuro);
+  --borde-claro: var(--verde-medio);
+  --borde-suave: #e0e0e0;
+  
+  /* Estados de feedback */
+  --exito: #4caf50;
+  --error: #d32f2f;
+  --advertencia: #ff9800;
+  --info: #2196f3;
+  
+  /* Fondos de feedback (versiones suaves) */
+  --fondo-exito: #e8f5e9;
+  --fondo-error: #ffebee;
+  --fondo-advertencia: #fff3e0;
+  --fondo-info: #e3f2fd;
+  
+  /* Sombras */
+  --sombra-suave: rgba(52, 7, 53, 0.1);
+  --sombra-media: rgba(52, 7, 53, 0.2);
+  --sombra-fuerte: rgba(52, 7, 53, 0.3);
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+}

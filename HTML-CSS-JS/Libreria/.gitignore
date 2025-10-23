@@ -1,0 +1,46 @@
+# === General ===
+.DS_Store
+Thumbs.db
+*.swp
+*.log
+logs/
+npm-debug.log*
+*.tsbuildinfo
+
+# === Node ===
+node_modules/
+
+# === TypeScript ===
+dist/
+dist-ssr/
+
+# === Environment ===
+.env
+*.local.*
+*.local
+
+# === IDEs & Editors ===
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# === Frontend ===
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.DS_Store
+
+# === Backend ===
+backend/node_modules/
+backend/dist/
+backend/.env
+backend/.DS_Store
+
+# Logs extras de Node
+*.log
+*.out
+*.err

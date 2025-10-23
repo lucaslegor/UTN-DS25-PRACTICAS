@@ -1,0 +1,306 @@
+/* Header Styles */
+.header-container {
+    background-image: url('../assets/Images/background-image-libro.avif');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+}
+
+.header-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.header-search {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 1rem 0;
+    position: relative;
+    z-index: 2;
+}
+
+.header-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+.logo-link:hover {
+    transform: scale(1.05);
+    color: white;
+}
+
+.logo-box img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    z-index: 100;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    transition: border-color 0.3s ease;
+}
+
+.logo-link:hover .logo-box img {
+    border-color: rgba(255, 255, 255, 0.8);
+}
+
+.header-title {
+    font-size: 2.2rem;
+    text-align: center;
+    margin: 0;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.header-nav-list {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin-top: 1rem;
+    font-weight: bold;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 2rem;
+}
+
+.header-nav-list-item a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.header-nav-list-item a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.6);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Header Right Section */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+}
+
+.login-button, .signup-button {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.login-button:hover, .signup-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.6);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.signup-button {
+    background: rgba(0, 123, 255, 0.3);
+    border-color: rgba(0, 123, 255, 0.5);
+}
+
+.signup-button:hover {
+    background: rgba(0, 123, 255, 0.5);
+    border-color: rgba(0, 123, 255, 0.8);
+}
+
+.test-admin-button {
+    background: rgba(255, 193, 7, 0.3);
+    border: 2px solid rgba(255, 193, 7, 0.5);
+    color: #ffc107;
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.test-admin-button:hover {
+    background: rgba(255, 193, 7, 0.5);
+    border-color: rgba(255, 193, 7, 0.8);
+    color: #ffc107;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(255, 193, 7, 0.3);
+}
+
+/* User Menu */
+.user-menu {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.welcome-text {
+    font-weight: 600;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.admin-link {
+    color: #ffc107;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(255, 193, 7, 0.3);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    background: rgba(255, 193, 7, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.admin-link:hover {
+    background: rgba(255, 193, 7, 0.2);
+    border-color: rgba(255, 193, 7, 0.6);
+    color: #ffc107;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(255, 193, 7, 0.3);
+}
+
+.logout-button {
+    background: rgba(220, 53, 69, 0.3);
+    border: 2px solid rgba(220, 53, 69, 0.5);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.logout-button:hover {
+    background: rgba(220, 53, 69, 0.5);
+    border-color: rgba(220, 53, 69, 0.8);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(220, 53, 69, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-container {
+        padding: 1rem;
+    }
+    
+    .header-top {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .header-title {
+        font-size: 2rem;
+    }
+    
+    .header-nav-list {
+        gap: 1rem;
+    }
+    
+    .header-nav-list-item a {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+    
+    .header-right {
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 0;
+    }
+    
+    .auth-buttons {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-title {
+        font-size: 1.5rem;
+    }
+    
+    .logo-box img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .header-nav-list {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .header-right {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .auth-buttons {
+        margin-left: 0;
+    }
+}
