@@ -1,0 +1,89 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+}
+
+// Modelo de Usuario
+model User {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  name      String
+  password  String
+  role      Role     @default(USER)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// Enum de roles
+enum Role {
+  USER
+  ADMIN
+}
+
+// Modelo de Autor
+model Author {
+  id          Int       @id @default(autoincrement())
+  name        String
+  biography   String?
+  nationality String?
+  birthDate   DateTime?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  // Relaciones
+  books Book[]
+}
+
+// Modelo de Libro
+model Book {
+  id            Int      @id @default(autoincrement())
+  title         String
+  description   String?
+  price         Float
+  stock         Int      @default(0)
+  isbn          String?  @unique
+  publishedYear Int?
+  imageUrl      String?
+  tema          String?  @default("literatura")
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  // Relaciones
+  authorId Int
+  author   Author @relation(fields: [authorId], references: [id])
+
+  categories BookCategory[]
+}
+
+// Modelo de Categoría
+model Category {
+  id          Int      @id @default(autoincrement())
+  name        String   @unique
+  description String?
+  createdAt   DateTime @default(now())
+
+  // Relaciones
+  books BookCategory[]
+}
+
+// Tabla intermedia para relación N:M entre Books y Categories
+model BookCategory {
+  bookId     Int
+  categoryId Int
+
+  book     Book     @relation(fields: [bookId], references: [id], onDelete: Cascade)
+  category Category @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+
+  @@id([bookId, categoryId])
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Libreria Lucas</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/contacto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <img src="Assets/Images/Logo.png" alt="logo" class="header-logo" width="150px">
+        <h1 class="header-title">Libreria Lucas</h1> 
+        <nav class="header-nav">
+            <ul class="header-nav-list">
+                <li class="header-nav-list-item"><a href="index.html">Inicio</a></li>
+                <li class="header-nav-list-item"><a href="literatura.html">Literatura</a></li>
+                <li class="header-nav-list-item"><a href="ciencia.html">Ciencia</a></li>
+                <li class="header-nav-list-item"><a href="historia.html">Historia</a></li>
+                <li class="header-nav-list-item"><a href="deportes.html">Deportes</a></li>
+                <li class="header-nav-list-item"><a href="contacto.html">Contacto</a></li>
+                <li class="header-nav-list-item"><a href="registro.html">Registro</a></li>
+                <li class="header-nav-list-item"><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-section">
+            <h2>Contacto</h2>
+            <div class="contact-container">
+                <form class="contact-form" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="nombre">Nombre completo:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Correo electrónico:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefono">Teléfono:</label>
+                        <input type="tel" id="telefono" name="telefono">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="asunto">Asunto:</label>
+                        <select id="asunto" name="asunto" required>
+                            <option value="">Seleccione un asunto</option>
+                            <option value="consulta">Consulta general</option>
+                            <option value="pedido">Pedido de libros</option>
+                            <option value="sugerencia">Sugerencia</option>
+                            <option value="reclamo">Reclamo</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Enviar mensaje</button>
+                </form>
+
+                <div class="contact-info">
+                    <h3>Información de contacto</h3>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Buenos Aires, La Plata</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <p>+54 11 1234-5678</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>librerialucas@gmail.com</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <p>Lunes a Viernes: 9:00 - 18:00</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Redes Sociales</h3>
+                <ul class="social-links">
+                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces</h3>
+                <ul>
+                    <li><a href="#">Términos y Condiciones</a></li>
+                    <li><a href="#">Política de Privacidad</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Librería Lucas. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html> 

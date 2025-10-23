@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background-image: url('../Assets/Images/background-image-libro.avif');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header-logo {
+    border-radius: 50%;
+    z-index: 100;
+}
+
+.header-title {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.header-nav-list {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+.header-nav-list-item a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+    border: 1px solid white;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+.header-nav-list-item a:hover {
+    background-color: #1e222e;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.section-libros-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.section-libros-container-item {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.section-libros-container-item a {
+    text-decoration: none;
+    color: black;
+}
+
+.section-libros-container-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.section-libros-container-item-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+footer {
+    background-color: #131447;
+    color: white;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.footer-section h3 {
+    margin-bottom: 1rem;
+}
+
+.footer-section ul {
+    list-style: none;
+    font-size: 1.2rem;
+}
+
+.footer-section li a {
+    text-decoration: none;
+    color: white;
+}
+
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    text-decoration: none;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #555;
+} 

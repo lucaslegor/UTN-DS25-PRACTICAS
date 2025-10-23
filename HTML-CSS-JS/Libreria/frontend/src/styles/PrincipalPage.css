@@ -1,0 +1,200 @@
+/* PrincipalPage Styles */
+.main-content {
+    padding: 2rem 0;
+    min-height: 80vh;
+}
+
+.section-temas {
+    margin-bottom: 2rem;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #2c3e50;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.section-libros-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+}
+
+.section-libros-container-item {
+    border: 2px solid #e9ecef;
+    padding: 1.5rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.section-libros-container-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.section-libros-container-item:hover::before {
+    transform: scaleX(1);
+}
+
+.section-libros-container-item a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.section-libros-container-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    border-color: #007bff;
+}
+
+.section-libros-container-item h3 {
+    color: #2c3e50;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.section-libros-container-item h4 {
+    color: #6c757d;
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.section-libros-container-item p {
+    color: #495057;
+    margin: 1rem 0;
+    line-height: 1.5;
+}
+
+.section-libros-container-item-img {
+    max-width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.section-libros-container-item:hover .section-libros-container-item-img {
+    transform: scale(1.05);
+}
+
+/* Search Results Styles */
+.search-results-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    border-radius: 15px;
+    border-left: 4px solid #007bff;
+}
+
+.search-results-header h2 {
+    color: #2c3e50;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.search-results-header p {
+    color: #6c757d;
+    font-size: 1.2rem;
+    margin: 0;
+    font-weight: 500;
+}
+
+.no-results {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: #f8f9fa;
+    border-radius: 15px;
+    margin: 2rem 0;
+}
+
+.no-results-icon {
+    font-size: 4rem;
+    color: #dee2e6;
+    margin-bottom: 1.5rem;
+}
+
+.no-results h3 {
+    color: #6c757d;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.no-results p {
+    color: #adb5bd;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-content {
+        padding: 1rem 0;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .section-libros-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 0.5rem;
+    }
+    
+    .section-libros-container-item {
+        padding: 1rem;
+    }
+    
+    .section-libros-container-item h3 {
+        font-size: 1.4rem;
+    }
+    
+    .section-libros-container-item-img {
+        height: 180px;
+    }
+    
+    .search-results-header {
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .search-results-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .search-results-header p {
+        font-size: 1rem;
+    }
+    
+    .no-results {
+        padding: 2rem 1rem;
+    }
+    
+    .no-results-icon {
+        font-size: 3rem;
+    }
+}
